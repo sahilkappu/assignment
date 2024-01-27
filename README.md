@@ -21,9 +21,9 @@ This is a Laravel project integrated with Keen Metronic 8, a powerful Bootstrap-
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/sahilkappu/assignment
+    git clone https://github.com/sahilkappu/assignment your-project-name
 
-    cd signUp Project
+    cd your-project-name
 
     composer install
 
