@@ -21,7 +21,7 @@ This Laravel project demonstrates a multi-role-based user authentication system,
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/sahilkappu/MCODE-ASSIGNMENT
+    git clone https://github.com/sahilkappu/assignment
     ```
 
 2. Install dependencies:
