@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="shortcut icon" href="https://electrovese.com/images/favicon.png" />
+    <link rel="shortcut icon" href="https://mcodeinfosoft.work/favicon.ico" />
     <!--begin::Fonts(mandatory for all pages)-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
     <!--end::Fonts-->
@@ -81,7 +81,7 @@
 
 <body id="kt_body" data-kt-app-page-loading-enabled="true" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed">
     <div id="loader" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed">
-        <img src="https://electrovese.com/images/home/Logo.png" alt="Logo" height="60px" width="150px" />
+        <img src="assets/media/images/mcode.webp" alt="Logo" height="60px" width="150px" />
         <div class="loading-circle"></div>
     </div>
     @include('layouts.loader')
@@ -114,7 +114,7 @@
                 </div>
                 <!--end::Content-->
                 <!--begin::Footer-->
-                <div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
+                <div class="footer py-4 d-flex flex-lg-column" id="kt_footer" style="background-color: #121212">
                     <!--begin::Container-->
                     @include('layouts.footer')
                     <!--end::Container-->
@@ -140,6 +140,34 @@
         window.addEventListener('load', function() {
             // Page is fully loaded, hide the loader
             document.getElementById('loader').style.display = 'none';
+        });
+        $(document).ready(function() {
+            var currentRoute = window.location.pathname;
+            currentRoute = currentRoute.substring(1);
+            $('#kt_aside_menu .menu-link').each(function() {
+                var menuLink = $(this).attr('href');
+                if (menuLink && menuLink.trim() !== '') {
+                    var menuRoute = menuLink.substring(menuLink.lastIndexOf('/') + 1);
+                    if (currentRoute === menuRoute) {
+                        $(this).addClass('active');
+                        var closestDiv = $(this).closest('.menu-item.py-2[data-kt-menu-placement="right-start"]');
+                        var closestAccordianDiv = $(this).closest('[data-kt-menu-trigger="click"]');
+                        var secondClosestAccordianDiv = closestAccordianDiv.parent().parent();
+                        if (closestDiv.length > 0) {
+                            closestDiv.addClass('here');
+                            closestDiv.addClass('show');
+                            closestAccordianDiv.addClass('here');
+                            closestAccordianDiv.addClass('show');
+                        }
+                        if (closestAccordianDiv.length > 0) {
+                            closestAccordianDiv.addClass('here');
+                            closestAccordianDiv.addClass('show');
+                            secondClosestAccordianDiv.addClass('here');
+                            secondClosestAccordianDiv.addClass('show');
+                        }
+                    }
+                }
+            });
         });
         // Toster Start
         toastr.options = {

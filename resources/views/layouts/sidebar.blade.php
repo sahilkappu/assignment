@@ -1,7 +1,7 @@
-<div id="kt_aside" class="aside overflow-visible pb-5 pt-5 pt-lg-0" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'80px', '300px': '100px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">
+<div id="kt_aside" class="aside overflow-visible pb-5 pt-5 pt-lg-0" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'80px', '300px': '100px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle" >
     <div class="aside-logo py-8" id="kt_aside_logo">
         <a href="{{ route('home') }}" class="d-flex align-items-center">
-            <img alt="Logo" src="https://electrovese.com/images/home/Logo.png" class="h-30px w-90px logo" />
+            <img alt="Logo" src="assets/media/images/mcode.webp" class="h-30px w-90px logo" />
         </a>
     </div>
     <div class="aside-menu flex-column-fluid" id="kt_aside_menu">
@@ -52,6 +52,85 @@
                                 <span class="menu-title">{{ __('Profile') }}</span>
                             </a>
                         </div>
+                </div>
+            </div>
+
+            <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item py-2">
+                <span class="menu-link menu-center">
+                    <span class="menu-icon me-0">
+                    <i class="fa-solid fa-blog"></i>
+                        </i>
+                    </span>
+                    <span class="menu-title">{{ __('Blogs') }}</span>
+                </span>
+                <div class="menu-sub menu-sub-dropdown menu-sub-indention px-2 py-4 w-250px mh-75 overflow-auto">
+                    <div class="menu-item">
+                        <div class="menu-content">
+                            <span class="menu-section fs-5 fw-bolder ps-1 py-1">{{ __('Blogs') }}</span>
+                        </div>
+                    </div>
+                    @if (Auth::user()->role_id == 1)
+                        <div class="menu-item">
+                            <a class="menu-link " href="{{route('add.blogs')}}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">{{ __('Add Blog') }}</span>
+                            </a>
+                        </div>
+                    @endif
+                        
+                    <div class="menu-item">
+                        <a class="menu-link " href="{{route('show.blogs')}}">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">{{ __('Show Blog') }}</span>
+                        </a>
+                    </div>
+                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                        <span class="menu-link">
+                            <span class="menu-icon">
+                                <i class="fa-solid fa-users"></i>
+                            </span>
+                            <span class="menu-title">{{ __('Blog Category') }}</span>
+                            <span class="menu-arrow"></span>
+                        </span>
+                        <div class="menu-sub menu-sub-accordion">
+                            <div class="menu-item">
+                                <a class="menu-link" href="{{route('category.technology')}}">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">{{ __('Technology') }}</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a class="menu-link" href="{{route('category.food')}}">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">{{ __('Food') }}</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a class="menu-link" href="{{route('category.science')}}">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">{{ __('Science') }}</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a class="menu-link" href="{{route('category.health')}}">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">{{ __('Health') }}</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

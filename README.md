@@ -1,36 +1,82 @@
-# Laravel Authentication with Bootstrap
+# Laravel Multi-Role Authentication with Bootstrap and Keen Metronic 8
 
-This is a simple Laravel project that demonstrates user authentication, including sign-up, sign-in, and Dashboard and a profile page. It uses Laravel/UI for authentication scaffolding and Bootstrap for styling.
-
-This is a Laravel project integrated with Keen Metronic 8, a powerful Bootstrap-based admin theme. The project includes user authentication with Laravel/UI and uses Keen Metronic for a modern and responsive user interface.
+This Laravel project demonstrates a multi-role-based user authentication system, utilizing Laravel/UI for authentication scaffolding and Bootstrap for styling. The user interface is enhanced with Keen Metronic 8, a powerful Bootstrap-based admin theme.
 
 ## Features
 
--   User login and logout functionality with front-end and backendVaidation.
--   Profile page for authenticated users.
--   Automatic generation of slugs using the user's name and a 4-digit random number.
+- User authentication with roles: admin and customer.
+- Secure user login and logout functionality with front-end and backend validation.
+- User registration with role assignment.
+- Admin dashboard for managing blogs.
+- Customer view to see blogs.
 
 ## Requirements
 
--   PHP >= 8.1
--   Composer installed
--   Node.js and npm installed
+- PHP >= 8.1
+- Composer installed
+- Node.js and npm installed
 
-## Installation
+## Getting Started
 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/sahilkappu/assignment your-project-name
-
-    cd your-project-name
-
-    composer install
-
-     php artisan key:generate
-     php artisan migrate
-     npm install && npm run dev
-     php artisan serve
+    git clone https://github.com/yourusername/yourproject.git
     ```
 
-Visit http://127.0.0.1:8000 in your browser, register a new user, log in, and explore the profile page.
+2. Install dependencies:
+
+    ```bash
+    composer install
+    npm install
+    ```
+
+3. Set up your environment variables:
+
+    ```bash
+    cp .env.example .env
+    ```
+
+    Update `.env` file with your database configuration and other necessary settings.
+
+4. Generate application key:
+
+    ```bash
+    php artisan key:generate
+    ```
+
+5. Run database migrations:
+
+    ```bash
+    php artisan migrate
+    ```
+
+6. Seed the database with roles and an admin user:
+
+    ```bash
+    php artisan db:seed
+    ```
+    
+
+7. Compile assets:
+
+    ```bash
+    npm run dev
+    ```
+
+8. Serve your application:
+
+    ```bash
+    php artisan serve
+    ```
+
+9. Visit `http://localhost:8000` in your browser.
+
+## Usage
+
+- Access the registration page to create a new account.
+- After registration, log in using your credentials.
+- Admin users can manage blogs through the admin dashboard.
+- Customers can view the list of blogs.
+
+Feel free to explore the project and customize it according to your needs!

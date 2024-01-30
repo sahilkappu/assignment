@@ -89,7 +89,7 @@
             <div class="row mb-7">
                 <label class="col-lg-4 fw-semibold text-muted">Company</label>
                 <div class="col-lg-8 fv-row">
-                    <span class="fw-semibold text-gray-800 fs-6">Electrovese</span>
+                    <span class="fw-semibold text-gray-800 fs-6">MCode Infosoft</span>
                 </div>
             </div>
             <div class="row mb-7">
@@ -104,7 +104,7 @@
             <div class="row mb-7">
                 <label class="col-lg-4 fw-semibold text-muted">Company Site</label>
                 <div class="col-lg-8">
-                    <a href="https://carsonlogistics.net" target="_blank" class="fw-semibold fs-6 text-gray-800 text-hover-primary">https://electrovese.com/</a>
+                    <a href="https://mcodeinfosoft.work/" target="_blank" class="fw-semibold fs-6 text-gray-800 text-hover-primary">https://mcodeinfosoft.work/</a>
                 </div>
             </div>
             <div class="row mb-7">

@@ -1,4 +1,4 @@
-<div id="kt_header" class="header align-items-stretch">
+<div id="kt_header" class="header align-items-stretch" >
     <!--begin::Container-->
     <div class="container-xxl d-flex align-items-stretch justify-content-between">
         <!--begin::Aside mobile toggle-->
@@ -10,7 +10,7 @@
         <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
             <!-- <a href="javascript:void(0)" class="d-lg-none"> -->
             <a href="?page=index" class="d-lg-none">
-                <img alt="Logo" src="https://electrovese.com/images/favicon.png" class="h-25px" />
+                <img alt="Logo" src="assets/media/images/mcode.webp" class="h-25px" />
             </a>
         </div>
         <!--end::Mobile logo-->
@@ -23,7 +23,7 @@
                     <!--begin::Menu-->
                     <div class="menu menu-rounded menu-column menu-lg-row menu-active-bg menu-state-primary menu-title-gray-700 menu-arrow-gray-400 fw-semibold my-5 my-lg-0 px-2 px-lg-0 align-items-stretch" id="#kt_header_menu" data-kt-menu="true">
                         <h3 class="mt-6  fw-bold text-white">
-                            Electrovese Innovative Solution
+                           Making Your Business Idea Come True
                         </h3>
                     </div>
                     <!--end::Menu-->

@@ -64,28 +64,12 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $user = User::create([
+        return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'phone_number' => $data['phone_number'],
             'password' => Hash::make($data['password']),
+            'role_id' => $data['role_id'],
         ]);
-        $slug = $this->generateSlug($data['name']);
-        $user->update(['slug' => $slug]);
-        return $user;
-    }
-    /**
-     * Generate a slug from a given string.
-     *
-     * @param  string  $value
-     * @return string
-     */
-    private function generateSlug($value)
-    {
-        $slug = strtolower(str_replace(' ', '-', $value));
-        $slug = preg_replace('/[^A-Za-z0-9\-]/', '', $slug);
-        $randomNumber = rand(1000, 9999);
-        $slug .= '-' . $randomNumber;
-        return $slug;
     }
 }

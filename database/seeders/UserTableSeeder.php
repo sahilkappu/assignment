@@ -2,43 +2,40 @@
 
 namespace Database\Seeders;
 
-use App\Models\Role;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class RoleTableSeeder extends Seeder
+class UserTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        $roles = [
+        $users = [
             [
-                'id' => '1',
-                'role' => 'Admin',
+                'name' => "Admin",
+                'email' => 'admin@mcode.com',
+                'password' => 'secret',
+                'role_id' => 1,
                 'active' => 1,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
-                'id' => '2',
-                'role' => 'Editor',
-                'active' => 1,
-                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            ],
-            [
-                'id' => '3',
-                'role' => 'Customer',
+                'name' => "Editor",
+                'email' => 'editor@mcode.com',
+                'password' => 'secret',
+                'role_id' => 2,
                 'active' => 1,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
         ];
-        foreach ($roles as $role) {
-            Role::create($role);
+        foreach ($users as $user) {
+            User::updateOrCreate($user);
         }
     }
 }

@@ -5,7 +5,7 @@
 	<title>Login</title>
 	<meta charset="utf-8" />
 	<meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="shortcut icon" href="https://electrovese.com/images/favicon.png" />
+    <link rel="shortcut icon" href="https://mcodeinfosoft.work/favicon.ico" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
     <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
@@ -17,13 +17,13 @@
 <body id="kt_body" class="auth-bg">
 	<div class="d-flex flex-column flex-root">
 		<div class="d-flex flex-column flex-lg-row flex-column-fluid">
-			<div class="d-flex flex-column flex-lg-row-fluid w-lg-50 p-10 order-2 order-lg-1">
+			<div class="d-flex flex-column flex-lg-row-fluid w-lg-50 p-10 order-2 order-lg-1" style="background-color: #e7e6dd;">
 				<div class="d-flex flex-center flex-column flex-lg-row-fluid">
 					<div class="w-lg-500px p-10">
 						<form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="/" method="POST" action="{{ route('login') }}">
 							@csrf
 							<div class="text-center mb-11">
-								<img src="https://electrovese.com/images/home/Logo.png" alt="image..." class="h-40px h-lg-60px mb-5">
+								<img src="assets/media/images/mcode.webp" alt="image..." class="h-40px h-lg-60px mb-5">
 								<h1 class="text-dark fw-bolder mb-3">{{ __('Sign In') }}</h1>
 							</div>
 
@@ -57,12 +57,13 @@
 			<div class="d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2" style="background-color: #06336a">
 				<div class="d-flex flex-column flex-center py-7 py-lg-15 px-5 px-md-15 w-100">
 					<a href="javascript:void(0)" class="mb-0 mb-lg-12">
-						<img src="https://electrovese.com/images/home/Logo.png" alt="image..." class="h-40px h-lg-60px mb-5">
+						<img src="assets/media/images/mcode.webp" alt="image..." class="h-40px h-lg-60px mb-5">
 					</a>
 					<img class="d-none d-lg-block mx-auto w-275px w-md-50 w-xl-500px mb-10 mb-lg-20" src="" alt="" />
-					<h1 class="d-none d-lg-block text-white fs-2qx fw-bolder text-center mb-7">Innovative Solution For Your Business</h1>
-					<div class="d-none d-lg-block text-white fs-base text-center"><a href="https://electrovese.com/" target="_blank" class="opacity-75-hover text-warning fw-bold me-1"> Electrovese </a>  is a team of highly passionate young workforce who have established as
-						Technology and Branding partners for our clients. With creative and innovative minds, our team has left no stone unturned in the digital era. We love to work on new concepts and help bring your ideas to life. We derive our name from “Electronics” and “Inovese”. “Inovese” is a Roman word for innovation.
+					<h1 class="d-none d-lg-block text-white fs-2qx fw-bolder text-center mb-7">Making Your Business Idea Come True</h1>
+					<div class="d-none d-lg-block text-white fs-base text-center"><a href="https://mcodeinfosoft.work/" target="_blank" class="opacity-75-hover text-warning fw-bold me-1"> Mcode </a>  Facilitating client learning—that is, teaching clients how to
+							resolve similar problems in the future..
+						
 					</div>
 				</div>
 			</div>

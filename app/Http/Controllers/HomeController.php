@@ -24,8 +24,25 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user = Auth::user()->slug;
-        return redirect()->route('profile.show', $user);
+        if (Auth::user()->active == 1) {
+            // dd(Auth::user()->role_id);
+            if (Auth::user()->role_id == 1) {
+                return redirect()->route('admin.dashboard');
+            } else if (Auth::user()->role_id == 2) {
+                return redirect()->route('editor.dashboard');
+            } else if (Auth::user()->role_id == 3) {
+                return redirect()->route('customer.dashboard');
+            } else {
+                return redirect('302');
+                return redirect()->to('dashboard/index');
+            }
+            // else {
+            //     return redirect()->to('dashboard/index');
+            // }
+            return redirect()->to('logout')->with('error', "User Suspended, cant login");
+        } else {
+            return redirect('302');
+            return redirect()->to('logout')->with('error', "User Suspended, cant login");
+        }
     }
-    
 }
